@@ -75,12 +75,46 @@ filterEvenNumbers([34, 5543, 2323, 55, 1, 22, 21, 4, 3, 44, 2, 4, 3])
 
 function lowercaseFirstLetter(string) {
     string = string.toUpperCase();
-    let stringArray = string.split("");
-    stringArray.forEach(element =>{
-        
-    })
+    let slicedString = string.slice(1)
+    let firstChar = string.charAt(0)
+    firstChar = firstChar.toLowerCase()
+    let finalOutput = firstChar.concat(slicedString)
+    console.log(`before converting the first character to lowercase : ${string}`);
+    console.log(`after converting the first character to lowercase : ${finalOutput}`);
+    
+    
 }
 
-lowercaseFirstLetter("salman");
+lowercaseFirstLetter("SHAHRIN");
 
+//problem 7: Write a function named findAverage that takes an array of numbers and returns the average of all elements.
+function findAverage(array) {
+    let sum = 0;
+    array.forEach(element=>{
+        sum += element
+    })
+    let average = sum/array.length
+    return average
+    
+
+}
+console.log("the average is "+findAverage([42, 24, 24,24]));
+
+// problem 8: 8) Write a function named isLeapYear that takes a year as an argument and returns true if the year is a leap year, and false if it is not.
+function isLeapYear(year) {
+    Number.parseInt(year)
+    if (year%400 === 0 || year%4 === 0 && (year%100 !== 0)) {
+        console.log(`the year ${year} is a leap year`);
+                
+    } else{
+        console.log(`the year ${year} is not a leap year`);
+
+    }
+    if (isNaN(year)) {
+        return "Enter valid numbers, not strings or other types.";
+
+    }
+}
+
+isLeapYear(2001)
 
