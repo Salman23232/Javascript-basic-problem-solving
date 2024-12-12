@@ -70,6 +70,17 @@ function filterEvenNumbers(arrayofNumbers) {
 filterEvenNumbers([34, 5543, 2323, 55, 1, 22, 21, 4, 3, 44, 2, 4, 3])
 
 //problem 5: write a function named sortArrayDescendig that takes an array of numbers and returns a new array sorted in descending order
+function sortArrayDescending(array) {
+   let sortedarray = array.sort((a,b)=>
+        b-a
+    )
+    console.log(sortedarray);
+    
+    
+}
+sortArrayDescending([2, 4, 3, 1, 5])
+
+
 
 // problem 6: Write a function named lowercaseFirstLetter that takes a string and returns the same string with the first letter lowercased.
 
